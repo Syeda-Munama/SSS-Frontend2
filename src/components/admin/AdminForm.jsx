@@ -14,7 +14,7 @@ export default function AdminForm() {
     event.preventDefault();
     if (!email || !password) {
       alert("Complete all the fields.");
-    } else if (email === "syedamunamahasan@gmail" && password === "12345678") {
+    } else if (email === "admin@gmail.com" && password === "12345678") {
       localStorage.setItem("uid", email);
       navigate("/adminPortal");
       console.log("Valid email and password");

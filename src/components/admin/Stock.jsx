@@ -27,10 +27,11 @@ const Stock = () => {
   });
 
   // Filter the products based on the search term
-  const filteredProducts = allProduct.data.filter((item) =>
+  const filteredProducts = allProduct?.data?.filter((item) =>
     item.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
     item.product_id.toString().includes(searchTerm)
-  );
+  ) || [];
+  
 
   return (
     <>
@@ -81,3 +82,5 @@ const Stock = () => {
 };
 
 export default Stock;
+
+
